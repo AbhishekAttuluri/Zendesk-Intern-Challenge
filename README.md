@@ -1,1 +1,0 @@
-# Zendesk-Intern-Challenge
