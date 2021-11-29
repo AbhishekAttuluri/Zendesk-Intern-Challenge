@@ -23,7 +23,7 @@ Internet Browser </br>
 
 ## Installation Instructions:
 
-1. Clone the repository to your local terminal.
+1. Clone the repository to your local terminal or download the ZIP file and extract it in your local machine.
 2. Open terminal and navigate to the project folder path.
 3. Install python3 from https://www.python.org/downloads/ and install django using ` pip3 install Django `
 4. Start the server using the command `python3 manage.py runserver`
