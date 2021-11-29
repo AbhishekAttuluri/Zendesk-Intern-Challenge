@@ -9,6 +9,8 @@ global username
 username = 'aattulur@buffalo.edu/token'
 global tokenid
 tokenid='MPtt4aCRPYGH9q8kd9YrifWa61Hz3YqTLr8cFn50'
+
+#This function fetches the starting 25 tickets from API and displays them in home page.
 def home(request):
     try:
         ss='https://zccabhishek121297.zendesk.com/api/v2/tickets.json?per_page=25&page='+str(i)
@@ -23,6 +25,7 @@ def home(request):
         print("Error in Code!!! Please check!!!")
 
 
+#This function fetches the details of a specific ticket.
 def get_ticket_details(request, product_id):
     try:
         ss='https://zccabhishek121297.zendesk.com/api/v2/tickets/' + str(product_id) +'.json'
@@ -36,6 +39,7 @@ def get_ticket_details(request, product_id):
     except:
         print('Error in code!!! Please check!!!')
 
+#This function fetches the next tickets after the current page.
 def next(request):
     try:
         global i
@@ -58,7 +62,8 @@ def next(request):
             return render(request, 'error.html', {'response':rep})
     except:
         print('Error in code!!! Please check!!!')
-
+        
+#This function fetches the previous tickets before the current page.
 def previous(request):
     try:
         global i
@@ -77,7 +82,7 @@ def previous(request):
     except:
         print('Error in code!!! Please check!!!')
 
-
+#This function handles the errors in the code.
 def responsecode(resp):
     if resp.status_code==404:
         return 'SORRY for the Inconvenience!!! Please try again later!!!'
