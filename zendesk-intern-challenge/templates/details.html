@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <style>
+            .heading{
+                font-family: arial, sans-serif;
+            }
+            .button {
+                background-color:black;
+                border: none;
+                color:white;
+                padding: 6px 15px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 15px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Ticket detail View
+        </title>
+    </head>
+    <body>
+        <h1 class='heading'> Ticket Details for #ID{{response.id|add:"-4"}}</h1>
+        <h2 class='heading'> Subject : {{response.subject}} <br><br> </h2>
+        <h3 class='heading'> <i>Ticket was requested by user {{response.requester_id}} on {{response.created_at}}</i></h3>
+        <h3 class='heading'> <i>Ticket was assigned to the group {{response.group_id}}</i></h3>
+        <b class='heading'> Description : </b> {{response.description}} <br><br>
+        <b class='heading'> Status : </b> {{response.status}} <br><br>
+        <b class='heading'> Priority : </b> {{response.priority}} <br><br>
+        <b class='heading'>Tags:</b> <ul>
+            {%for i in response.tags%}
+            <li>{{i}}</li>
+            {%endfor%}
+        </ul>
+        
+        
+
+        <a href="{% url 'home' %}" class='button'> <button type="submit" class="button">Go to all tickets</button></a>
+    </body>
+</html>
