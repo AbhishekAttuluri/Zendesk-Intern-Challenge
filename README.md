@@ -45,8 +45,13 @@ The main UI is designed so that it can display the following components:</br>
 **Status** : The status whether ticket is open, close or pending.</br>
 **Priority** : Priority if it set for some important tickets.</br>
 
+<img width="1440" alt="Screen Shot 2021-11-28 at 8 01 12 PM" src="https://user-images.githubusercontent.com/36640099/143794069-53668ab0-accf-4cb1-8a48-88c0ee422421.png">
+
 ### PART 2:
 When ever we click the ID of a specific ticket, the details of the ticket are viewed as follows.</br>
+
+![68FC478D-98FE-4000-A32B-3B7364566994_1_201_a](https://user-images.githubusercontent.com/36640099/143794374-13bfe03c-ad3d-4fd2-9a3c-5c217c2d51cb.jpeg)
+
 
 The following components are treated important to display and hence displayed.</br>
 **ID** :  Automatically assigned to a ticket when it is created.</br>
@@ -62,16 +67,20 @@ In the bottom we have a Go to all tickets button which can navigate to displayed
 
 
 ### PART 3:
-If the page is down, the authentication details are wrong or any other issues that UI is displayed as below.</br>
+If the page is down, the authentication details are wrong or any other issues the UI is displayed as below.</br>
 **CASE 1**: If the API is not available, the following message is displayed.</br>
+![79F2EC47-F49A-4A54-A37F-19B47B9F12D5_1_201_a](https://user-images.githubusercontent.com/36640099/143795362-8557e9d3-6530-45a0-9781-0f06658bd80c.jpeg)
+
 **CASE 2**: If the authentication is failed to connect to API, the following message is displayed.</br>
-**CASE 3**: If the response available is invalid or if any other issues in the program, the following message is displayed.</br>
+![AEBE8079-A592-4C74-BD36-45D01AB76A94_1_201_a](https://user-images.githubusercontent.com/36640099/143795386-eb6fe14a-0fe6-4943-aacd-a23131ea8263.jpeg)
+
+**CASE 3**: If the response available is invalid or if any other issues in the program, an error message stating it appears.</br>
 
 
 ### File structure for the project in Django:
 
 To maintain clean and clear code so that anyone can get to know how is the projct navigation, a solid file structure is followed.</br>
-The project files looks as follows:</br>
+The components of the project are as follows:</br>
 
 **Templates** : Templates consist the HTML, CSS and JS parts of the project to handle the frontend.</br>
             1. home.html : This handles the home page that is displayed immediately after the page is loaded.</br>
